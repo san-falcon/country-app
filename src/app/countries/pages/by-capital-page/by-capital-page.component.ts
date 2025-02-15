@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country';
+import { delay, pipe } from 'rxjs';
 
 @Component({
   selector: 'countries-by-capital-page',
@@ -11,12 +12,16 @@ import { Country } from '../../interfaces/country';
 export class ByCapitalPageComponent {
 
   public countries: Country[] = [];
+  public isLoading: boolean = false;
   constructor(private countriesService: CountriesService) {
   }
 
   public searchByCapital(term: string): void {
-    this.countriesService.searchCapital(term).subscribe(resp => {
-      this.countries = resp;
-    });
+    this.isLoading = true;
+    this.countriesService.searchCapital(term)
+      .subscribe(resp => {
+        this.isLoading = false;
+        this.countries = resp;
+      });
   }
 }

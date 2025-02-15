@@ -14,4 +14,7 @@ export class CountryTableComponent {
 
   @Input()
   public countries: Country[] = [];
+
+  @Input()
+  public isLoading: boolean = false;
 }

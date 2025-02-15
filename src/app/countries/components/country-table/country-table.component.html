@@ -1,8 +1,9 @@
-<div *ngIf="countries.length === 0; else table" class="alert alert-warning text-center">
-  No hay pasises que mostrar
+<div *ngIf="countries.length === 0 && this.isLoading === false; else table" class="alert alert-warning text-center">
+  Sin resultados de busqueda
 </div>
 <ng-template #table>
-  <table class="table table-bordered table-hover w-100">
+  <shared-loading-spinner *ngIf="this.isLoading"></shared-loading-spinner>
+  <table *ngIf="!this.isLoading" class="table table-bordered table-hover w-100">
     <thead class="table-light">
       <tr>
         <th>#</th>

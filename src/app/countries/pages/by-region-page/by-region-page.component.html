@@ -5,6 +5,6 @@
     <shared-search-box [placeholder]="'Buscar por región'" (onValue)="searchByRegion($event)"></shared-search-box>
   </div>
   <div class="col-12 mt-4">
-    <countries-table [countries]="this.data"></countries-table>
+    <countries-table [countries]="this.data" [isLoading]="this.isLoading"></countries-table>
   </div>
 </div>
