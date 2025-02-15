@@ -1,0 +1,37 @@
+<h2>Filtros</h2>
+
+<!-- Se tiene que usar el RouterModulo para poder usar el routerLink -->
+<!-- Con el exact le decimos que se cumpla exactamente el routerLink -->
+<ul class="list-group">
+  <!-- <li [routerLink]="''"
+  [routerLinkActiveOptions]="{exact: true}"
+  [routerLinkActive]="'active'"
+  class="list-group-item">
+    Home Page
+  </li>
+  <li [routerLink]="'about'"
+  [routerLinkActive]="'active'"
+  class="list-group-item">
+    About Page
+  </li>
+  <li [routerLink]="'contact'"
+  [routerLinkActive]="'active'"
+  class="list-group-item">
+    Contac Page
+  </li> -->
+  <li [routerLink]="'countries/by-country'"
+  [routerLinkActive]="'active'"
+  class="list-group-item">
+    País
+  </li>
+  <li [routerLink]="'countries/by-capital'"
+  [routerLinkActive]="'active'"
+  class="list-group-item">
+    Capital
+  </li>
+  <li [routerLink]="'countries/by-region'"
+  [routerLinkActive]="'active'"
+  class="list-group-item">
+    Región
+  </li>
+</ul>

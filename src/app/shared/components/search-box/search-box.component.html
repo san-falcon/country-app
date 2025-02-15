@@ -1,0 +1,6 @@
+<!--
+ Esta es otra opcion de como enviar los datos del input al metodo emitValue()
+ Como parametro enviamos el valor directamente txtInput.value
+<input type="text" class="form-control" [placeholder]="this.placeholder" (keyup.enter)="emitValue(txtInput.value)" #txtInput>
+-->
+<input type="text" class="form-control" [placeholder]="this.placeholder" (keyup.enter)="emitValue()" #txtInput>

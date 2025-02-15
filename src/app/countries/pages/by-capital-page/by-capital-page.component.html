@@ -1,0 +1,14 @@
+<h2>Buscar paises por <span class="fw-bold text-primary">Capital</span></h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <!-- SearchBox -->
+    <shared-search-box [placeholder]="'Buscar por capital'" (onValue)="searchByCapital($event)">
+    </shared-search-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col mt-4">
+    <countries-table [countries]="this.countries"></countries-table>
+  </div>
+</div>
