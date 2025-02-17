@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
   <div class="col-12">
-    <shared-search-box [placeholder]="'Buscar por País'" (onValue)="search($event)"></shared-search-box>
+    <shared-search-box [placeholder]="'Buscar por País'" (onDebounce)="search($event)"></shared-search-box>
   </div>
   <div class="col-12 mt-4">
     <countries-table [countries]="this.data" [isLoading]="this.isLoading"></countries-table>

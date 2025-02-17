@@ -3,4 +3,5 @@
  Como parametro enviamos el valor directamente txtInput.value
 <input type="text" class="form-control" [placeholder]="this.placeholder" (keyup.enter)="emitValue(txtInput.value)" #txtInput>
 -->
-<input type="text" class="form-control" [placeholder]="this.placeholder" (keyup.enter)="emitValue()" #txtInput>
+<input type="text" class="form-control" [placeholder]="this.placeholder" (keyup.enter)="onKeyEnter()"
+  (keyup)="onKeyPress(txtInput.value)" #txtInput>
